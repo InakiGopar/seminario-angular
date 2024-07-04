@@ -1,0 +1,22 @@
+<div class="input-group">
+  <input
+    type="text"
+    [(ngModel)]="quantity"
+    (keyup)="OnChangeQuantity($event)"
+    class="form-control"
+  />
+  <button
+    type="button"
+    (click)="downQuantity()"
+    [ngClass]="{ 'btn btn-primary': !condition, 'offer-button ': condition }"
+  >
+    -
+  </button>
+  <button
+    type="button"
+    (click)="upQuantity()"
+    [ngClass]="{ 'btn btn-primary': !condition, 'offer-button': condition }"
+  >
+    +
+  </button>
+</div>

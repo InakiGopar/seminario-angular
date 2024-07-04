@@ -1,0 +1,18 @@
+.input-group input {
+  max-width: 100px;
+  text-align: center;
+}
+
+.input-group button {
+  height: 40px;
+  width: 40px;
+}
+.input-group .offer-button {
+  color: #fff;
+  background-color: #198754;
+  border-radius: 0.375rem;
+  border: #198754;
+}
+.input-group .offer-button:hover {
+  background-color: #17784b;
+}

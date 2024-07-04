@@ -1,0 +1,50 @@
+<h3>Nuestros productos</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Descripción</th>
+      <th>Stock</th>
+      <th>Pedidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (product of products; track product.name) {
+    <tr [ngClass]="{ offer: product.specialPrice }">
+      <td><img [src]="product.image" [alt]="product.name" /></td>
+      <td>{{ product.name }}</td>
+      <td>
+        {{ product.price | currency }}
+        @if (product.specialPrice) {
+        <span class="badge text-bg-success">Oferta</span>
+        }
+      </td>
+      <td>{{ product.description }}</td>
+      @if (product.stock > 0) {
+      <td>{{ product.stock }}</td>
+      <td>
+        <div class="container-input-button">
+          <app-input-integer
+            [(quantity)]="product.quantity"
+            [max]="product.stock"
+            [condition]="product.specialPrice"
+          >
+          </app-input-integer>
+          <button class="btn btn-light btn-buy" (click)="addToCart(product)">
+            Comprar
+          </button>
+        </div>
+      </td>
+      } @else {
+      <td><span class="badge text-bg-warning">SIN STOCK</span></td>
+      }
+    </tr>
+    } @empty {
+    <tr>
+      <td colspan="4">No hay productos para mostrar</td>
+    </tr>
+    }
+  </tbody>
+</table>
