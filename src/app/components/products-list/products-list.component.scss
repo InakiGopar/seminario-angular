@@ -1,13 +1,16 @@
 h3 {
   margin: 1em 0em;
 }
+
 img {
   height: 100px;
   width: 100px;
 }
+
 tr {
   text-align: center;
 }
+
 td {
   vertical-align: middle;
 }
@@ -19,6 +22,11 @@ td {
   margin-left: 5px;
 }
 
-.offer {
-  border-bottom: 3px solid #198754;
+.offer button {
+  background-color: #198754;
+  color: #fff;
+}
+
+.offer button:hover {
+  background-color: #146f44;
 }

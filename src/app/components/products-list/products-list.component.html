@@ -5,7 +5,6 @@
       <th>Imagen</th>
       <th>Nombre</th>
       <th>Precio</th>
-      <th>Descripción</th>
       <th>Stock</th>
       <th>Pedidos</th>
     </tr>
@@ -21,7 +20,6 @@
         <span class="badge text-bg-success">Oferta</span>
         }
       </td>
-      <td>{{ product.description }}</td>
       @if (product.stock > 0) {
       <td>{{ product.stock }}</td>
       <td>
@@ -32,7 +30,7 @@
             [condition]="product.specialPrice"
           >
           </app-input-integer>
-          <button class="btn btn-light btn-buy" (click)="addToCart(product)">
+          <button class="btn btn-primary btn-buy" (click)="addToCart(product)">
             Comprar
           </button>
         </div>

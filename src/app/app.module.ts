@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { YsyprobamosAboutComponent } from './components/ysyprobamos-about/ysyprobamos-about.component';
 import { YsyprobamosProductsComponent } from './components/ysyprobamos-products/ysyprobamos-products.component';
 import { InputIntegerComponent } from './components/input-integer/input-integer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { InputIntegerComponent } from './components/input-integer/input-integer.
     YsyprobamosProductsComponent,
     InputIntegerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductCartService } from '../../service/product-cart.service';
 import { Product } from '../products-list/Product';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -10,7 +10,21 @@ import { Observable } from 'rxjs';
 })
 export class ShoppingCartComponent {
   cartList$: Observable<Product[]> | undefined;
+  total: number = 0;
+
   constructor(private cart: ProductCartService) {
-    this.cartList$ = cart.cartList.asObservable();
+    this.cartList$ = this.cart.cartList
+      .asObservable()
+      .pipe(tap((products: Product[]) => this.calculateTotal(products)));
+  }
+  /**
+   * Este metodo calcula el valor total del carrito de compras iterando por cada
+   * producto agregado al mismo suma el precio multiplicado la cantidad
+   */
+  calculateTotal(products: Product[]): number {
+    return (this.total = products.reduce(
+      (total, product) => total + product.price * product.quantity,
+      0
+    ));
   }
 }

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5vh;
+  text-align: center;
+  background-color: rgba(248, 249, 250);
+}
