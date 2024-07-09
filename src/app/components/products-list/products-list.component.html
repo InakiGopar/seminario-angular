@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (product of products; track product.name) {
+    @for (product of products |async; track product.name) {
     <tr [ngClass]="{ offer: product.specialPrice }">
       <td><img [src]="product.image" [alt]="product.name" /></td>
       <td>{{ product.name }}</td>
@@ -31,7 +31,7 @@
           >
           </app-input-integer>
           <button class="btn btn-primary btn-buy" (click)="addToCart(product)">
-            Comprar
+            Agregar al carrito
           </button>
         </div>
       </td>

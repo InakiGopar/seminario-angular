@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from './Product';
-import { ProductCartService } from '../../service/product-cart.service';
-import { ProductDataService } from '../../service/product-data.service';
+import { ProductService } from '../../service/product.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-products-list',
@@ -9,15 +9,10 @@ import { ProductDataService } from '../../service/product-data.service';
   styleUrl: './products-list.component.scss',
 })
 export class ProductsListComponent {
-  products: Array<Product> = [];
+  products: Observable<Product[]> = new Observable();
 
-  constructor(
-    private cart: ProductCartService,
-    private productDataServicie: ProductDataService
-  ) {
-    this.productDataServicie
-      .getAll()
-      .subscribe((products) => (this.products = products));
+  constructor(private cart: ProductService) {
+    this.products = this.cart.productList.asObservable();
   }
 
   addToCart(product: Product): void {
