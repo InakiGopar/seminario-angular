@@ -27,4 +27,9 @@ export class ShoppingCartComponent {
       0
     ));
   }
+  removeOfCart(product: Product): void {
+    this.cart.removeOfCart(product);
+    // Recalcula el total después de eliminar un producto del carrito
+    this.cartList$?.subscribe((products) => this.calculateTotal(products));
+  }
 }

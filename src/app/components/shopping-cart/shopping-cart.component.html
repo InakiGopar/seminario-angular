@@ -18,6 +18,9 @@
         <span class="badge text-bg-primary rounded-pill">
           {{ product.quantity }}
         </span>
+        <button class="btn btn-danger" (click)="removeOfCart(product)">
+          Eliminar del carrito
+        </button>
       </li>
       }
     </ol>

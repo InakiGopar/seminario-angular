@@ -49,4 +49,26 @@ export class ProductService {
     //le estoy diciendo al behaviorSubject que notifique que hubo un cambio en mi varaible privada
     this.cartList.next(this._cartList);
   }
+
+  removeOfCart(product: Product): void {
+    let item: Product | undefined = this._cartList.find(
+      (p1) => p1.name == product.name
+    );
+    if (item && item.quantity >= 0) {
+      item.quantity--;
+
+      let productInList: Product | undefined = this._productList.find(
+        (p1) => p1.name == product.name
+      );
+      if (productInList) {
+        productInList.stock++;
+      }
+
+      if (item.quantity === 0) {
+        this._cartList = this._cartList.filter((p) => p.name !== product.name);
+      }
+    }
+    this.cartList.next(this._cartList);
+    this.productList.next(this._productList);
+  }
 }
