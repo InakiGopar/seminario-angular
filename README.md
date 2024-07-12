@@ -1,27 +1,15 @@
-# YsiProbamos
+# Ysi Probamos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Ysi Probamos es una aplicación destinada a la compra y venta de postres, específicamente tortas. La aplicación permite a los usuarios explorar un catálogo de tortas disponibles, agregar productos al carrito de compras y gestionar sus pedidos.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Catálogo de Productos**: Muestra una lista de tortas disponibles con sus detalles, incluyendo nombre, precio, y stock.
+- **Carrito de Compras**: Los usuarios pueden agregar tortas al carrito de compras, ver el total acumulado y eliminar productos del carrito.
+- **Actualización en Tiempo Real**: Los cambios en el carrito de compras se reflejan inmediatamente, incluyendo la actualización del stock de productos y el cálculo del total a pagar.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Datos del estudiante 
+- **Nombre y Apellido**: Iñaki Gopar
+- **DNI**: 43909013
+- **Email**: tatigop09@gmail.com
+- **Sede**: Tandil
