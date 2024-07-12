@@ -26,5 +26,7 @@
     </ol>
     <div class="alert alert-primary" role="alert">{{ total | currency }}</div>
   </div>
-  <button class="btn btn-primary">Comprar</button>
+  @if(total > 0) {
+  <a [routerLink]="['/pay']" class="btn btn-primary" role="button">Comprar</a>
+  }
 </div>

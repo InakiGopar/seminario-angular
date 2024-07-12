@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { YsyprobamosProductsComponent } from './components/ysyprobamos-products/ysyprobamos-products.component';
-import { YsyprobamosAboutComponent } from './components/ysyprobamos-about/ysyprobamos-about.component';
-import { YsiprobamosContactComponent } from './components/ysyprobamos-contact/ysyprobamos-contact.component';
+import { YsiprobamosProductsComponent } from './components/ysiprobamos-products/ysiprobamos-products.component';
+import { YsiprobamosAboutComponent } from './components/ysiprobamos-about/ysiprobamos-about.component';
+import { YsiprobamosContactComponent } from './components/ysiprobamos-contact/ysiprobamos-contact.component';
+import { PayFormComponent } from './components/pay-form/pay-form.component';
 
 const routes: Routes = [
   {
@@ -12,15 +13,19 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    component: YsyprobamosProductsComponent,
+    component: YsiprobamosProductsComponent,
   },
   {
     path: 'about',
-    component: YsyprobamosAboutComponent,
+    component: YsiprobamosAboutComponent,
   },
   {
     path: 'contact',
     component: YsiprobamosContactComponent,
+  },
+  {
+    path: 'pay',
+    component: PayFormComponent,
   },
 ];
 

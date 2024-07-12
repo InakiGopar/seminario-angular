@@ -9,21 +9,23 @@ import { AppComponent } from './app.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
-import { YsyprobamosAboutComponent } from './components/ysyprobamos-about/ysyprobamos-about.component';
-import { YsyprobamosProductsComponent } from './components/ysyprobamos-products/ysyprobamos-products.component';
+import { YsiprobamosAboutComponent } from './components/ysiprobamos-about/ysiprobamos-about.component';
+import { YsiprobamosProductsComponent } from './components/ysiprobamos-products/ysiprobamos-products.component';
 import { InputIntegerComponent } from './components/input-integer/input-integer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { YsiprobamosContactComponent } from './components/ysyprobamos-contact/ysyprobamos-contact.component';
+import { YsiprobamosContactComponent } from './components/ysiprobamos-contact/ysiprobamos-contact.component';
+import { PayFormComponent } from './components/pay-form/pay-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsListComponent,
     ShoppingCartComponent,
-    YsyprobamosAboutComponent,
-    YsyprobamosProductsComponent,
+    YsiprobamosAboutComponent,
+    YsiprobamosProductsComponent,
     InputIntegerComponent,
     YsiprobamosContactComponent,
+    PayFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideClientHydration()],

@@ -1,0 +1,82 @@
+<main class="page payment-page">
+  <section class="payment-form dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2>Pago</h2>
+      </div>
+      <form>
+        <div class="products">
+          @for (product of productsToPay | async; track $index){
+          <div class="item">
+            <span class="price">
+              {{ product.price * product.quantity | currency }}
+            </span>
+            <p class="item-name">{{ product.quantity }} {{ product.name }}</p>
+          </div>
+          }
+        </div>
+        <div class="card-details">
+          <h3 class="title">Detalles de tarjeta</h3>
+          <div class="row">
+            <div class="form-group col-sm-7">
+              <label for="card-holder">Propietario de la tarjeta</label>
+              <input
+                id="card-holder"
+                type="text"
+                class="form-control"
+                placeholder="Propietario de la tarjeta"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="form-group col-sm-5">
+              <label for="">Fecha de expiración</label>
+              <div class="input-group expiration-date">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="MM"
+                  aria-label="MM"
+                  aria-describedby="basic-addon1"
+                />
+                <span class="date-separator">/</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="YY"
+                  aria-label="YY"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+            <div class="form-group col-sm-8">
+              <label for="card-number">Numero de tarjeta</label>
+              <input
+                id="card-number"
+                type="text"
+                class="form-control"
+                placeholder="Numero de tarjeta"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="cvc">CVC</label>
+              <input
+                id="cvc"
+                type="text"
+                class="form-control"
+                placeholder="CVC"
+                aria-label="Card Holder"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="form-group col-sm-12">
+              <button type="button" class="btn btn-primary pay">Pagar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

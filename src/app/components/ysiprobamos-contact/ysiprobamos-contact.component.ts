@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './ysyprobamos-contact.component.html',
-  styleUrl: './ysyprobamos-contact.component.scss',
+  templateUrl: './ysiprobamos-contact.component.html',
+  styleUrl: './ysiprobamos-contact.component.scss',
 })
 export class YsiprobamosContactComponent {}
