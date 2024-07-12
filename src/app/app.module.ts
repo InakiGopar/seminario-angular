@@ -13,6 +13,7 @@ import { YsyprobamosAboutComponent } from './components/ysyprobamos-about/ysypro
 import { YsyprobamosProductsComponent } from './components/ysyprobamos-products/ysyprobamos-products.component';
 import { InputIntegerComponent } from './components/input-integer/input-integer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { YsiprobamosContactComponent } from './components/ysyprobamos-contact/ysyprobamos-contact.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     YsyprobamosAboutComponent,
     YsyprobamosProductsComponent,
     InputIntegerComponent,
+    YsiprobamosContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideClientHydration()],
